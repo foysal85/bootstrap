@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explor Carde</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAADICAMAAAD7nnzuAAAAe1BMVEUAAAD///+NjY05OTmcnJxvb2/x8fG2trbR0dHj4+Pn5+f6+vr09PS5ubn39/d1dXUdHR3c3NzW1tbCwsI6OjpoaGgMDAzNzc0jIyPHx8eWlpYwMDCIiIiurq4XFxdDQ0OCgoIqKipOTk6ioqJZWVlhYWFNTU17e3tGRkZ+mVDcAAAI4klEQVR4nO2da1viOhSFqVwFEVBAHEFRVOb//8Kh4jxId7Lb7LVKWnB9PWeGvNM22fc0kiA9tGbN8bxRQc3HzVnrIYymEULejk2Yr3YIf3H47jg2WDEtunT43lNsqOJq3nHhl7GBwnRFhO/8jU0TqrcbFvz1c2yWcC36HPhJbBCT5tcM+E4lj/V8jfPf/Hz4Gm3zx3rB4dexGez6g8L3YhMgmoDwtX3pU+W9+Dnwq9jrx3QPwdfEnvdpisDfx149qh4A/x578ahGdvjb2GvHZYcfxl46LjW2ocKvYy8d18YM/xp76bjezPCxV07Q3Ap/HXvlDA2M8HexF86Q5tZr8LV2av5LC2Zq8A+xF86Qdtad/ZPXDNyz/+atr309I5cZaQGNsz/qrLt9P/bCGbpoeC158Qv/C/8Lf37w1g3voo+6s4C3GjkXbeGdhW1vdWwu2qV9jL1whh6N8LVPVqXScpUa/BnkLBqNoRG+G3vhDGn1mBr8JvbCGdJSNhr8FfKjr9NmYS1KLPjSijE1eKTIeqv8vU51et2rNxryQVqSWoNH1lKw+jWryeqDhr2XlqzT4JE8pRF+p5sNtdr1yQiPfIl2+J3umzR2NVOpwEN1GRD8zsTgbYFKplKBh5w6ED5Jtix4xaFX4CHTHoaneRaKca/AQ9YtDp90FhR4xb5V4P9Ehk9upwz4lgl+Fhs+GTCefdsED9UcU+CTDgG+aYEfQKcNB54RTFIOej88FsEjwSdrnN4fwvTDY3EcAT+ctZ0ara9avf6tbxUDHN4fy/HDQ5u9hG+p//u0/ejpB8Ir/v3bvR8eayQMhN/p6arjXAds6Pr9Oi/8APOtwuEbjYXTHsHewJ3G4fBgKZYF3h0CwZNm3pokLzz4rdngnXEX2L/1xjC98GCThRHedURCocRUs1D4AdhaZIV3pJfg3MkiFB6tvjTDv4ul4DauL1npgy+6Vp/M8I7tCVyK/6T3wb+Av2eHX4u1wDuer7PSAw/XJdjhX0TQDW9w85j3Hng4U2WHbwhDb4Quxpez8sDDMRQAXjymNboYn0/vhscLUgB44YXhT95j5LnhoQjWlwD4VfaPEjJY7liWE76PpwwAeGGNEtr75s5CTCc87EhB8NlAOyGe4Rkh4YLvELrmAfjsQ6IUhS1csRIXPGrdpbLDP2ePOsJ72HBbeQ54whePwAsfjDO2Q/ybuuEpU+/s8Nn9jlUE6wiUSHhOAZoZXnyctHStdJYFPGO3awDw2QfPSNrs9ST2PAGP2zdfssJ/ZP8c7cE7YmRZeM7WaoZvZrclauV3dsfPwNOGAtngm6KMgju8IfNNHcMzTvi9TPAf4jha0xa013FmoFHSTxngF8KjKaH0+ejN/wHfZ9b/BcNPN9IALaPgf/QjJ3qA31ALYMPgp8ueo2KsnJL35iFe8B9+SKl/Oagg/PPT22i5unbWyvE2oIze/4eyU/hB74o+9k7A33ZcuvEm5jvsItyfmra+QjuN1fKdU/J1LLQyY1X2uNnmx7q0YX8Y/D2aNogrAP5hWfMRhGb4fr2f+V7mJ9+/X21rOF76SNg332+VsQmfTHAdXo/kW8cQo+qakKmJI0oF5nVNRw6Tyk/hepwoYtXe1rKTW8BPuk4NH3uT/q3SBFTH2RUCXg8OTkctl1ObipJD8Wi1/ixjyKkljDUbOn28ckZ3PE+3qy+X9mFLtylsAcy5s/iYP8Rgse6lP/QdzLgdkm1qc9JCBvKosftUL/ffb9ghjLWKGMb6qbZ8+DdUY//wz1uZAOZBU0lPDDu8/0gNHIWuiZc0AfCNT7HvDWim3vLnX3uctGAlqzB4R+E569EfV6dk0lW0iCkEL/tfbzgbUiZZl01Urik/gsL/FY+e4uFlF5WFH5BucsDgZdEg46wXBS8iP9+PXJyw1zL7xwk1Cq/iFKlcWcpe4g6WAW6EyUZ6R0ESJX4EwsthD/BH7+hdcsBTnEgUXlQpoGENVwGqqwiRYeug8KL0Gj3pXfWnzvJTgimNwovqY3ArGrvcRWfhMeHRo/DCuQPbvQoXHjO+evqTx0IaruLTSjYbfEmUS2JPPqDZgHChAwovnhT2zbvbCj0NRnArGwg/F+c81O/lmQ5WwdayVPI1hc55T0tl9ZoKvyTHCEAWXlhTYcR20lRy2MEAqRYLbCeF33sMXoZwIa8utJE4Wgt5KhnLwPz50BbyBExjQPCO/sc1sJbg4QGonYPAO6b63CIpteCxEagjQWwqTAW99eEDQ8AWB/vYCOfYRiiyGD4qBryM2Ai/cHe6Q2aHYUgQNPLXCP++8gzIgh78pwEey1+ENxvMVt4rZ7C4tWUw2IlGwrVH2+Wf7sQ/FA6eBGoZCVeNYYCpwFPXf11fxcdApgLzh9I7LgBfhQGgqdCwrTLpu9KjX1PBSTqvfVftob+p8KslbEN/Y497TkUoRbKNe4486HunCaMaxTboO+6I950nxykRso14jzncP+HVB9mG+8e71mFn1NEKw4zXOkS60GNnXnWJd7pYL/T4BH7TDN/bkKqCvmW9yuWkl/gknbvhZku8xuRb1kt8oO8u5Pqm13F5NfXW65tK6+E+pawXd130lW1nAW+9rO+ir2k8C3jrBZ217GnLynovLV6cUgH5I3gXcCPxRd9Fbb2F/KLh69jGKuRNA+XA92MvnKFf+F/4C4S3bngXDX8Wu/1Fn/NWC+8szFurbX8Wjo3Vq6MMlo8tOeG6GPxZvPbWJ3/RGx5vwHhEue9+zIfHb8yqgFQ+7T+SZ+HGkGjHLgxfz5lkR1ITpir8GcSutbC9Dk+5PieuNDwdnnXHQzwpRXi58LVPW2j2XR48+VaFk0urScmHr3miVkvR5sPjHcUxpR7yBeBr7dZqdn0ReOaktFMrtyIsF76+L76vfTgEvlPi9NEyNfZ0agXB19Stn2th2+LwyXUN580vtExNCHzS+RubJVRv+e98Ufja7fnOkUBm+KRXI0O3qcXqLfAnuFmGpNccm9YEv/PxKFd3lquRFqpG4FP+1qxZYok0oPl42m7pHqzQP+DFc0slp30mAAAAAElFTkSuQmCC" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Bootstrap
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="slider.html">Slider</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="card.html">Card</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">I am Ronaldinho. Former footballer of Brazil nationa team</p>
+          <a href="#" class="btn btn-primary">Hier me</a>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        <img src="image/CamScanner 11-30-2021 01.46[17] - Copy.jpg" class="card-img-bottom" alt="...">
+      </div>
+      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Secondary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Success card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Danger card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Warning card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Info card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Light card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Dark card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <br>
+      <div class="card-group">
+        <div class="card">
+          <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/Ronaldinho.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
